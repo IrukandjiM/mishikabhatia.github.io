@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mishika Bhatia</title>
 
-  <!-- Serif font (old money vibes) -->
+  <!-- Serif font -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
@@ -16,23 +16,18 @@
       font-family: "Libre Baskerville", Georgia, serif;
       background-color: #fdfaf6;
       background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-      color: #2b2b2b;
+      color: #2a2a2a;
     }
 
-    .burgundy {
-      color: #7b1e3a;
-    }
-
-    .border-burgundy {
-      border-color: #7b1e3a;
-    }
+    .burgundy { color: #7b1e3a; }
+    .border-burgundy { border-color: #7b1e3a; }
 
     .btn {
       border: 1px solid #7b1e3a;
       color: #7b1e3a;
-      padding: 0.5rem 1.25rem;
-      transition: all 0.3s ease;
+      padding: 0.55rem 1.5rem;
       font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
@@ -43,7 +38,7 @@
     .card {
       background: #ffffff;
       border: 1px solid #7b1e3a;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 1.5rem;
       transition: transform 0.3s ease;
     }
@@ -56,10 +51,12 @@
       width: 100%;
       height: 220px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      border-radius: 10px;
       background: #eee;
+      margin-bottom: 1rem;
     }
+
+    section { scroll-margin-top: 100px; }
   </style>
 </head>
 
@@ -68,7 +65,7 @@
 <!-- NAVBAR -->
 <nav class="sticky top-0 bg-[#fdfaf6] border-b border-burgundy z-50">
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="burgundy font-bold text-lg">&lt;/mishika&gt;</a>
+    <a href="#home" class="burgundy font-bold tracking-wide text-lg">&lt;/mishika&gt;</a>
     <div class="space-x-6 text-sm">
       <a href="#about" class="hover:underline">About</a>
       <a href="#projects" class="hover:underline">Projects</a>
@@ -79,25 +76,31 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="py-24 text-center">
-  <h1 class="text-3xl font-bold mb-4">Mishika Bhatia</h1>
-  <p class="text-lg max-w-xl mx-auto">
-    Researcher, founder, and aspiring physician dedicated to
-    understudied diseases, translational science, and mentorship.
+<section id="home" class="py-28 text-center">
+  <h1 class="text-4xl font-bold mb-6">Mishika Bhatia</h1>
+  <p class="max-w-xl mx-auto text-lg">
+    Biomedical researcher, founder, and aspiring physician
+    focused on understudied diseases, translational science,
+    and STEM mentorship.
   </p>
-  <div class="mt-8">
+  <div class="mt-10">
     <a href="" class="btn">Download CV</a>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 border-t border-burgundy">
+<!-- ABOUT ME -->
+<section id="about" class="py-24 border-t border-burgundy">
   <div class="max-w-screen-md mx-auto px-6">
-    <h2 class="text-2xl burgundy font-semibold mb-6">About</h2>
-    <p class="leading-relaxed">
-      I am a student researcher working at the intersection of biomedical science,
-      clinical translation, and equity in healthcare. My work focuses on diseases
-      that are common, stigmatized, or historically overlooked.
+    <h2 class="text-2xl burgundy font-semibold mb-8 text-center">About Me</h2>
+    <p class="leading-relaxed text-base">
+      I am a student researcher working at the intersection of biomedical research,
+      clinical translation, and health equity. My work centers on diseases that are
+      common yet understudied—conditions often dismissed due to stigma, complexity,
+      or lack of funding.
+      <br><br>
+      Through independent research, hospital collaborations, and nonprofit leadership,
+      I focus on asking questions that sit at the margins of medicine and turning them
+      into rigorous, patient-centered inquiry.
     </p>
   </div>
 </section>
@@ -105,67 +108,72 @@
 <!-- PROJECTS -->
 <section id="projects" class="py-24 border-t border-burgundy">
   <div class="max-w-screen-lg mx-auto px-6">
-    <h2 class="text-2xl burgundy font-semibold mb-12 text-center">
-      Selected Works
-    </h2>
+    <h2 class="text-2xl burgundy font-semibold mb-14 text-center">Selected Projects</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+      <!-- 1 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">PCOS Translational Research</h3>
         <p class="text-sm mb-4">
-          Investigated 5α-reductase inhibition as a therapeutic pathway for PCOS,
-          supported by CU Anschutz and presented at ISEF.
+          Investigated 5α-reductase inhibition as a potential therapeutic pathway
+          for PCOS. Supported by CU Anschutz; presented at ISEF.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
 
+      <!-- 2 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Pilonidal Disease Pediatric Research</h3>
         <p class="text-sm mb-4">
-          Outcomes research in pediatric surgery at Children’s Hospital Colorado,
-          with publication anticipated.
+          Clinical outcomes research with Children’s Hospital Colorado,
+          focused on pediatric surgical care.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
 
+      <!-- 3 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Vivaly</h3>
         <p class="text-sm mb-4">
-          Full-stack wellness platform featuring ML-based cyberbullying detection
+          Full-stack wellness platform with ML-based cyberbullying detection
           and moderated social spaces.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
 
+      <!-- 4 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">3D-Printed Disaster-Resilient Housing</h3>
         <p class="text-sm mb-4">
-          PETG curvilinear housing design capable of withstanding extreme loads
-          at low construction cost.
+          PETG curvilinear architecture optimized for load distribution,
+          resilience, and low-cost construction.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
 
+      <!-- 5 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">FemFairy</h3>
         <p class="text-sm mb-4">
-          Women’s safety app integrating geospatial alerts, emergency routing,
-          and contact broadcasting.
+          Women’s safety app integrating geospatial alerts,
+          emergency routing, and real-time contact broadcasting.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
 
+      <!-- 6 -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">OriFlair Solar Charger</h3>
         <p class="text-sm mb-4">
-          Lightweight, modular solar charging system designed for everyday use.
+          Lightweight, modular solar charger designed
+          for everyday use and climate accessibility.
         </p>
         <a href="" class="btn">View Project</a>
       </div>
@@ -177,7 +185,7 @@
 <!-- MENTORSHIP -->
 <section id="mentorship" class="py-24 border-t border-burgundy">
   <div class="max-w-screen-lg mx-auto px-6">
-    <h2 class="text-2xl burgundy font-semibold mb-12 text-center">
+    <h2 class="text-2xl burgundy font-semibold mb-14 text-center">
       STEM Mentorship & Leadership
     </h2>
 
@@ -187,15 +195,17 @@
         <img src="" alt="">
         <h3 class="font-semibold mb-2">PCOS Research Mentorship</h3>
         <p class="text-sm">
-          Mentoring student researchers in experimental design and scientific writing.
+          Mentoring students in experimental design,
+          literature analysis, and scientific writing.
         </p>
       </div>
 
       <div class="card">
         <img src="" alt="">
-        <h3 class="font-semibold mb-2">Surgical Outcomes Research</h3>
+        <h3 class="font-semibold mb-2">Clinical Research Mentorship</h3>
         <p class="text-sm">
-          Guiding students in pediatric clinical research methodology.
+          Guiding students through pediatric surgical
+          outcomes research and data interpretation.
         </p>
       </div>
 
@@ -203,9 +213,10 @@
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Lady Trailblazers</h3>
         <p class="text-sm mb-4">
-          Statewide nonprofit empowering girls in STEM through curriculum and leadership.
+          Founder-led statewide nonprofit empowering
+          girls in STEM through curriculum and leadership.
         </p>
-        <a href="" class="btn">Visit Organization</a>
+        <a href="" class="btn">Visit Website</a>
       </div>
 
     </div>
@@ -215,7 +226,7 @@
 <!-- CONTACT -->
 <section id="contact" class="py-24 border-t border-burgundy text-center">
   <h2 class="text-2xl burgundy font-semibold mb-6">Get in Touch</h2>
-  <p class="mb-6">Email or connect with me professionally.</p>
+  <p class="mb-8">For research, collaboration, or mentorship inquiries.</p>
   <a href="mailto:" class="btn">Email Me</a>
 </section>
 
@@ -225,3 +236,4 @@
 
 </body>
 </html>
+
