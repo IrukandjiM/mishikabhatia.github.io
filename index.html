@@ -119,37 +119,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* Navbar link underline animation */
-    a.hover-underline {
-      position: relative;
-      text-decoration: none;
-    }
-    a.hover-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -2px;
-      background: #5C1A33;
-      transition: width 0.3s ease;
-    }
-    a.hover-underline:hover::after {
-      width: 100%;
-    }
-
-    /* Footer */
-    footer {
-      position: relative;
-    }
-    footer .footer-line {
-      width: 80px;
-      height: 1.5px;
-      background: #5C1A33;
-      margin: 0 auto 10px;
-      border-radius: 1px;
-    }
-
     section { scroll-margin-top: 100px; }
   </style>
 </head>
@@ -161,10 +130,10 @@
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
     <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">mishika bhatia</a>
     <div class="space-x-6 text-sm">
-      <a href="#about" class="hover-underline deep-burgundy">About</a>
-      <a href="#projects" class="hover-underline deep-burgundy">Projects</a>
-      <a href="#mentorship" class="hover-underline deep-burgundy">Mentorship</a>
-      <a href="#contact" class="hover-underline deep-burgundy">Contact</a>
+      <a href="#about" class="hover:underline deep-burgundy">About</a>
+      <a href="#projects" class="hover:underline deep-burgundy">Projects</a>
+      <a href="#mentorship" class="hover:underline deep-burgundy">Mentorship</a>
+      <a href="#contact" class="hover:underline deep-burgundy">Contact</a>
     </div>
   </div>
 </nav>
@@ -330,11 +299,8 @@
   <a href="mailto:" class="btn">Contact</a>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-8 text-center text-sm deep-burgundy">
-  <div class="footer-line"></div>
+<footer class="py-8 text-center text-sm border-t border-burgundy deep-burgundy">
   © Mishika Bhatia
-  <!-- Optional: add small icons here -->
 </footer>
 
 <script>
@@ -353,4 +319,3 @@
 
 </body>
 </html>
-
