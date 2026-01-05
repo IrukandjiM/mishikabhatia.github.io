@@ -11,26 +11,20 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/8022519056.js" crossorigin="anonymous"></script>
 
-  <!-- Custom Burgundy Theme -->
+  <!-- Custom Styles -->
   <style>
     body {
-      background-color: #ffffff;
+      background: linear-gradient(120deg, #ffffff 0%, #fef6f6 100%);
+      font-family: 'Helvetica', sans-serif;
     }
-    .burgundy {
-      color: #7a1f2b;
-    }
-    .burgundy-bg {
-      background-color: #7a1f2b;
-    }
-    .burgundy-bg-dark {
-      background-color: #5c1721;
-    }
-    .burgundy-border {
-      border-color: #7a1f2b;
-    }
-    .burgundy-hover:hover {
-      background-color: #5c1721;
-    }
+    .burgundy { color: #7a1f2b; }
+    .burgundy-bg { background-color: #7a1f2b; color: white; }
+    .burgundy-bg-dark { background-color: #5c1721; color: white; }
+    .burgundy-border { border-color: #7a1f2b; }
+    .burgundy-hover:hover { background-color: #5c1721; color: white; }
+    .section-title { text-transform: uppercase; letter-spacing: 1px; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
   </style>
 </head>
 
@@ -51,7 +45,7 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="py-24">
+<section id="home" class="py-24 bg-gradient-to-b from-white to-gray-100">
   <div class="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center px-4">
 
     <div class="md:w-1/2 text-center">
@@ -60,16 +54,16 @@
       <h1 class="text-3xl font-bold burgundy">Mishika Bhatia</h1>
       <p class="mt-4 text-gray-700 leading-relaxed">
         Translational biomedical researcher focused on<br>
-        understudied, stigmatized, and overlooked diseases
+        understudied, stigmatized, and overlooked disease
       </p>
 
       <div class="mt-8 space-x-4">
         <a href="assets/Mishika_Bhatia_CV.pdf" target="_blank"
-           class="burgundy-bg text-white px-6 py-2 font-semibold burgundy-hover">
+           class="burgundy-bg px-6 py-2 font-semibold rounded shadow-lg hover:burgundy-hover">
           Download CV
         </a>
         <a href="#projects"
-           class="border-2 burgundy-border px-6 py-2 font-semibold burgundy hover:bg-gray-100">
+           class="border-2 burgundy-border px-6 py-2 font-semibold rounded hover:burgundy-bg hover:text-white">
           View Work
         </a>
       </div>
@@ -93,13 +87,13 @@
 <!-- ABOUT -->
 <section id="about" class="py-20 bg-gray-50 border-t-4 burgundy-border">
   <div class="max-w-screen-lg mx-auto px-4">
-    <h2 class="text-2xl font-bold text-center burgundy mb-10">About Me</h2>
+    <h2 class="text-2xl font-bold text-center burgundy mb-10 section-title">About Me</h2>
     <p class="text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
       I am driven by the questions medicine often avoids: why certain conditions remain
       understudied, why discomfort becomes stigma, and how research can be reshaped to
       center patients whose experiences fall outside traditional models. My work spans
-      translational medical research, clinical collaboration, and mentorship, with the long-term
-      goal of combining rigorous science with compassionate clinical care as a physician-scientist.
+      translational research, clinical collaboration, and mentorship, with the long-term
+      goal of combining rigorous science with compassionate care.
     </p>
   </div>
 </section>
@@ -107,12 +101,12 @@
 <!-- PROJECTS -->
 <section id="projects" class="py-24">
   <div class="max-w-screen-lg mx-auto px-4">
-    <h2 class="text-2xl font-bold text-center burgundy mb-14">Selected Projects</h2>
+    <h2 class="text-2xl font-bold text-center burgundy mb-14 section-title">Selected Projects</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-      <!-- Repeatable Project Card -->
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- PCOS -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/pcos.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">PCOS Therapeutic Research</h3>
@@ -121,13 +115,14 @@
             clinical treatment for PCOS symptoms.
           </p>
           <div class="mt-4 flex space-x-6">
-            <a href="#" class="burgundy font-semibold">Paper</a>
-            <a href="#" class="burgundy font-semibold">Poster</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Paper</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Poster</a>
           </div>
         </div>
       </div>
 
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- PILONIDAL -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/pilonidal.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">Pilonidal Disease Research</h3>
@@ -136,63 +131,63 @@
             with Children’s Hospital Colorado.
           </p>
           <div class="mt-4">
-            <a href="#" class="burgundy font-semibold">Manuscript (forthcoming)</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Manuscript (forthcoming)</a>
           </div>
         </div>
       </div>
 
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- VIVALY -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/vivaly.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">Vivaly</h3>
           <p class="text-sm text-gray-700 mt-3">
-            Mental-health-centered social platform with ML-based
-            anti-cyberbullying moderation.
+            Mental-health-centered social platform with ML-based anti-cyberbullying moderation.
           </p>
           <div class="mt-4">
-            <a href="#" class="burgundy font-semibold">Demo</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Demo</a>
           </div>
         </div>
       </div>
 
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- 3D HOMES -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/3dhomes.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">Curvilinear 3D-Printed Housing</h3>
           <p class="text-sm text-gray-700 mt-3">
-            PETG-based disaster-resilient housing using Fibonacci-inspired
-            curvilinear architecture.
+            PETG-based disaster-resilient housing using Fibonacci-inspired curvilinear architecture.
           </p>
           <div class="mt-4">
-            <a href="#" class="burgundy font-semibold">Technical Report</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Technical Report</a>
           </div>
         </div>
       </div>
 
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- FEMFAIRY -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/femfairy.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">FemFairy</h3>
           <p class="text-sm text-gray-700 mt-3">
-            Women’s safety application integrating geospatial alerts and
-            safer-route modeling.
+            Women’s safety application integrating geospatial alerts and safer-route modeling.
           </p>
           <div class="mt-4">
-            <a href="#" class="burgundy font-semibold">Overview</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Overview</a>
           </div>
         </div>
       </div>
 
-      <div class="border-l-4 burgundy-border bg-white shadow-md hover:shadow-lg transition">
+      <!-- ORIFLAIR -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
         <img src="assets/oriflair.jpg" class="w-full h-56 object-cover" alt="">
         <div class="p-5">
           <h3 class="font-semibold text-lg burgundy">OriFlair Solar Charger</h3>
           <p class="text-sm text-gray-700 mt-3">
-            Lightweight, modular solar charging system designed for
-            accessibility and everyday use.
+            Lightweight, modular solar charging system designed for accessibility and everyday use.
           </p>
           <div class="mt-4">
-            <a href="#" class="burgundy font-semibold">Design Brief</a>
+            <a href="#" class="burgundy font-semibold hover:underline">Design Brief</a>
           </div>
         </div>
       </div>
@@ -204,34 +199,41 @@
 <!-- MENTORSHIP -->
 <section id="mentorship" class="py-24 bg-gray-50 border-t-4 burgundy-border">
   <div class="max-w-screen-lg mx-auto px-4">
-    <h2 class="text-2xl font-bold text-center burgundy mb-12">
-      STEM Mentorship
-    </h2>
+    <h2 class="text-2xl font-bold text-center burgundy mb-12 section-title">STEM Mentorship & Leadership</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <div class="bg-white p-6 shadow-md border-t-4 burgundy-border">
-        <h3 class="font-semibold burgundy mb-3">Research Mentorship I</h3>
-        <p class="text-sm text-gray-700">
-          Mentoring a student-led biomedical research project from
-          experimental design through data analysis and presentation.
-        </p>
+      <!-- Mentorship Card 1 -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
+        <img src="assets/mentorship1.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="font-semibold burgundy text-lg">Research Mentorship I</h3>
+          <p class="text-sm text-gray-700 mt-2">
+            Mentoring a student-led biomedical research project from experimental design through data analysis and presentation.
+          </p>
+        </div>
       </div>
 
-      <div class="bg-white p-6 shadow-md border-t-4 burgundy-border">
-        <h3 class="font-semibold burgundy mb-3">Research Mentorship II</h3>
-        <p class="text-sm text-gray-700">
-          Guiding an independent research project focused on clinical
-          relevance, scientific writing, and ethics in experimentation.
-        </p>
+      <!-- Mentorship Card 2 -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
+        <img src="assets/mentorship2.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="font-semibold burgundy text-lg">Research Mentorship II</h3>
+          <p class="text-sm text-gray-700 mt-2">
+            Guiding an independent research project focused on clinical relevance, scientific writing, and ethics in experimentation.
+          </p>
+        </div>
       </div>
 
-      <div class="bg-white p-6 shadow-md border-t-4 burgundy-border">
-        <h3 class="font-semibold burgundy mb-3">Lady Trailblazers</h3>
-        <p class="text-sm text-gray-700">
-          Founder and organizational lead of a statewide nonprofit advancing
-          STEM confidence, leadership, and professionalism for K–12 girls.
-        </p>
+      <!-- Lady Trailblazers -->
+      <div class="card border-l-4 burgundy-border bg-white shadow-md">
+        <img src="assets/ladytrailblazers.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="font-semibold burgundy text-lg">Lady Trailblazers</h3>
+          <p class="text-sm text-gray-700 mt-2">
+            Founder and organizational lead of a statewide nonprofit advancing STEM confidence, leadership, and professionalism for K–12 girls.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -241,9 +243,9 @@
 <!-- CONTACT -->
 <section id="contact" class="py-24">
   <div class="max-w-screen-lg mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold burgundy mb-6">Get in Touch</h2>
+    <h2 class="text-2xl font-bold burgundy mb-6 section-title">Get in Touch</h2>
     <p class="text-gray-700 mb-4">
-      For:
+      For research, collaboration, or mentorship inquiries:
     </p>
     <p class="burgundy font-semibold">your@email.com</p>
   </div>
@@ -256,4 +258,3 @@
 
 </body>
 </html>
-
