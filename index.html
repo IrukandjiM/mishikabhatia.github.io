@@ -28,7 +28,7 @@
       padding: 0.55rem 1.5rem;
       font-size: 0.9rem;
       transition: all 0.3s ease;
-      display: inline-block;
+      margin-right: 0.5rem;
     }
 
     .btn:hover {
@@ -57,6 +57,14 @@
       margin-bottom: 1rem;
     }
 
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #7b1e3a;
+      margin-bottom: 1.5rem;
+    }
+
     section { scroll-margin-top: 100px; }
   </style>
 </head>
@@ -66,9 +74,7 @@
 <!-- NAVBAR -->
 <nav class="sticky top-0 bg-[#fdfaf6] border-b border-burgundy z-50">
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="burgundy font-bold tracking-wide text-lg">
-      Mishika Bhatia
-    </a>
+    <a href="#home" class="burgundy font-bold tracking-wide text-lg">Mishika Bhatia</a>
     <div class="space-x-6 text-sm">
       <a href="#about" class="hover:underline">About</a>
       <a href="#projects" class="hover:underline">Projects</a>
@@ -80,24 +86,14 @@
 
 <!-- HERO -->
 <section id="home" class="py-28 text-center">
-  <div class="flex flex-col items-center">
-    <!-- PROFILE IMAGE -->
-    <img
-      src=""
-      alt="Profile photo"
-      class="w-40 h-40 rounded-full object-cover border-4 border-burgundy mb-8"
-    />
-
-    <h1 class="text-4xl font-bold mb-6">Mishika Bhatia</h1>
-    <p class="max-w-xl mx-auto text-lg">
-      Biomedical researcher, founder, and aspiring physician
-      focused on understudied diseases, translational science,
-      and STEM mentorship.
-    </p>
-
-    <div class="mt-10">
-      <a href="" class="btn">Download CV</a>
-    </div>
+  <h1 class="text-4xl font-bold mb-6">Mishika Bhatia</h1>
+  <p class="max-w-xl mx-auto text-lg">
+    Biomedical researcher, founder, and aspiring physician
+    focused on understudied diseases, translational science,
+    and STEM mentorship.
+  </p>
+  <div class="mt-10">
+    <a href="" class="btn">Download CV</a>
   </div>
 </section>
 
@@ -105,7 +101,8 @@
 <section id="about" class="py-24 border-t border-burgundy">
   <div class="max-w-screen-md mx-auto px-6 text-center">
     <h2 class="text-2xl burgundy font-semibold mb-8">About Me</h2>
-    <p class="leading-relaxed text-base text-left">
+    <img src="" alt="Profile Image" class="profile-pic mx-auto">
+    <p class="leading-relaxed text-base">
       I am a student researcher working at the intersection of biomedical research,
       clinical translation, and health equity. My work centers on diseases that are
       common yet understudied—conditions often dismissed due to stigma, complexity,
@@ -125,21 +122,21 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-      <!-- PCOS -->
+      <!-- 1 - PCOS Research -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">PCOS Translational Research</h3>
-        <p class="text-sm mb-6">
+        <p class="text-sm mb-4">
           Investigated 5α-reductase inhibition as a potential therapeutic pathway
           for PCOS. Supported by CU Anschutz; presented at ISEF.
         </p>
-        <div class="flex flex-wrap gap-3">
+        <div>
           <a href="" class="btn">View Project</a>
-          <a href="" class="btn">Media Coverage</a>
+          <a href="" class="btn">Media Article</a>
         </div>
       </div>
 
-      <!-- Pilonidal -->
+      <!-- 2 - Pilonidal -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Pilonidal Disease Pediatric Research</h3>
@@ -150,7 +147,7 @@
         <a href="" class="btn">View Project</a>
       </div>
 
-      <!-- Vivaly -->
+      <!-- 3 - Vivaly -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Vivaly</h3>
@@ -161,7 +158,7 @@
         <a href="" class="btn">View Project</a>
       </div>
 
-      <!-- Housing -->
+      <!-- 4 - 3D Homes -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">3D-Printed Disaster-Resilient Housing</h3>
@@ -172,7 +169,7 @@
         <a href="" class="btn">View Project</a>
       </div>
 
-      <!-- FemFairy -->
+      <!-- 5 - FemFairy -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">FemFairy</h3>
@@ -183,7 +180,7 @@
         <a href="" class="btn">View Project</a>
       </div>
 
-      <!-- OriFlair -->
+      <!-- 6 - OriFlair -->
       <div class="card">
         <img src="" alt="">
         <h3 class="font-semibold mb-2">OriFlair Solar Charger</h3>
@@ -229,8 +226,7 @@
         <img src="" alt="">
         <h3 class="font-semibold mb-2">Lady Trailblazers</h3>
         <p class="text-sm mb-4">
-          Founder-led statewide nonprofit empowering
-          girls in STEM through curriculum and leadership.
+          Statewide nonprofit empowering girls in STEM through curriculum and leadership.
         </p>
         <a href="" class="btn">Visit Website</a>
       </div>
