@@ -5,8 +5,8 @@
   <title>Mishika Bhatia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Serif Font (Old Money Vibe) -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Old-money serif -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -16,41 +16,64 @@
 
   <style>
     body {
-      font-family: 'Libre Baskerville', Georgia, serif;
-      background-color: #faf7f4;
-      color: #2b1e1e;
+      font-family: 'EB Garamond', Georgia, serif;
+      color: #2a1b1d;
+      background-color: #f9f6f2;
+      background-image:
+        linear-gradient(0deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+        repeating-linear-gradient(
+          45deg,
+          rgba(0,0,0,0.015) 0px,
+          rgba(0,0,0,0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
     }
 
-    .burgundy { color: #6b1f2b; }
-    .bg-burgundy { background-color: #6b1f2b; }
-    .border-burgundy { border-color: #6b1f2b; }
+    :root {
+      --burgundy: #5b1f2a;
+      --cream: #f9f6f2;
+    }
+
+    .burgundy { color: var(--burgundy); }
+    .bg-burgundy { background-color: var(--burgundy); }
+    .border-burgundy { border-color: var(--burgundy); }
 
     .section-divider {
-      border-top: 1px solid #6b1f2b;
-      margin: 4rem auto;
-      width: 60%;
+      border-top: 1px solid var(--burgundy);
+      margin: 5rem auto;
+      width: 55%;
+      opacity: 0.5;
     }
 
     .card {
-      background: white;
-      border: 1px solid #6b1f2b;
-      transition: transform 0.3s ease;
+      background: #ffffff;
+      border: 1px solid rgba(91,31,42,0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
     }
 
     .btn {
-      border: 1px solid #6b1f2b;
-      color: #6b1f2b;
-      padding: 0.5rem 1rem;
+      border: 1px solid var(--burgundy);
+      color: var(--burgundy);
+      padding: 0.45rem 1.2rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #6b1f2b;
-      color: white;
+      background-color: var(--burgundy);
+      color: #ffffff;
+    }
+
+    nav a {
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
@@ -58,10 +81,10 @@
 <body>
 
 <!-- NAV -->
-<nav class="sticky top-0 bg-white border-b border-burgundy z-50">
+<nav class="sticky top-0 bg-white bg-opacity-80 backdrop-blur border-b border-burgundy z-50">
   <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="text-xl burgundy font-bold">&lt;/mishika&gt;</span>
-    <div class="space-x-6 text-sm">
+    <span class="text-xl burgundy font-semibold tracking-widest">&lt;/mishika&gt;</span>
+    <div class="space-x-8 text-sm uppercase">
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#mentorship" class="hover:underline">Mentorship</a>
       <a href="#contact" class="hover:underline">Contact</a>
@@ -70,16 +93,19 @@
 </nav>
 
 <!-- HERO -->
-<section class="max-w-5xl mx-auto px-6 py-20 text-center">
-  <img src="YOUR_PROFILE_IMAGE.jpg" class="mx-auto w-48 h-48 rounded-full object-cover mb-6" />
-  <h1 class="text-3xl font-bold burgundy">Mishika Bhatia</h1>
-  <p class="mt-4 text-lg max-w-xl mx-auto">
-    Researcher, builder, and advocate working at the intersection of women’s health,
-    biomedical engineering, and equitable STEM access.
+<section class="max-w-5xl mx-auto px-6 py-24 text-center">
+  <img src="YOUR_PROFILE_IMAGE.jpg"
+       class="mx-auto w-44 h-44 rounded-full object-cover mb-8 border border-burgundy" />
+
+  <h1 class="text-4xl burgundy font-semibold">Mishika Bhatia</h1>
+
+  <p class="mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
+    Researcher and builder working across women’s health, biomedical engineering,
+    and equitable access to STEM education.
   </p>
 
-  <div class="mt-6">
-    <a href="YOUR_CV_LINK.pdf" class="btn">Download CV</a>
+  <div class="mt-10">
+    <a href="YOUR_CV_LINK.pdf" class="btn">Download Curriculum Vitae</a>
   </div>
 </section>
 
@@ -87,59 +113,31 @@
 
 <!-- PROJECTS -->
 <section id="projects" class="max-w-6xl mx-auto px-6">
-  <h2 class="text-2xl burgundy text-center font-bold mb-12">Selected Projects</h2>
+  <h2 class="text-3xl burgundy text-center font-semibold mb-14">
+    Selected Works
+  </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-    <!-- PROJECT CARD TEMPLATE -->
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">PCOS Research Project</h3>
-      <p class="text-sm mt-2">
-        Brief description of your PCOS research and its clinical or societal relevance.
+    <!-- PROJECT CARD -->
+    <div class="card p-5">
+      <img src="PROJECT_IMAGE.jpg" class="w-full h-60 object-cover mb-5" />
+      <h3 class="text-2xl burgundy font-semibold">PCOS Research</h3>
+      <p class="text-sm mt-3 leading-relaxed">
+        Brief description of the project’s scientific and social significance.
       </p>
-      <div class="mt-4 flex space-x-4">
-        <a href="PAPER_LINK" class="btn">Read</a>
-        <a href="VIDEO_LINK" class="btn">Watch</a>
-      </div>
-    </div>
-
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">Pilonidal Disease Research</h3>
-      <p class="text-sm mt-2">Description here.</p>
-      <div class="mt-4 flex space-x-4">
+      <div class="mt-5 flex space-x-4">
         <a href="#" class="btn">Read</a>
+        <a href="#" class="btn">View Supplement</a>
       </div>
     </div>
 
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">Vivaly</h3>
-      <p class="text-sm mt-2">Description here.</p>
-      <div class="mt-4"><a href="#" class="btn">View</a></div>
-    </div>
-
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">3D Printed Disaster-Resilient Housing</h3>
-      <p class="text-sm mt-2">Description here.</p>
-      <div class="mt-4"><a href="#" class="btn">Read</a></div>
-    </div>
-
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">FemFairy</h3>
-      <p class="text-sm mt-2">Description here.</p>
-      <div class="mt-4"><a href="#" class="btn">Visit</a></div>
-    </div>
-
-    <div class="card p-4">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-56 object-cover mb-4" />
-      <h3 class="text-xl font-bold burgundy">Oriflair Solar Charger</h3>
-      <p class="text-sm mt-2">Description here.</p>
-      <div class="mt-4"><a href="#" class="btn">Explore</a></div>
-    </div>
+    <!-- Duplicate card structure for remaining projects -->
+    <!-- Pilonidal Disease -->
+    <!-- Vivaly -->
+    <!-- PETG Housing -->
+    <!-- FemFairy -->
+    <!-- Oriflair -->
 
   </div>
 </section>
@@ -148,29 +146,32 @@
 
 <!-- MENTORSHIP -->
 <section id="mentorship" class="max-w-6xl mx-auto px-6">
-  <h2 class="text-2xl burgundy text-center font-bold mb-12">STEM-Based Mentorship</h2>
+  <h2 class="text-3xl burgundy text-center font-semibold mb-14">
+    Mentorship & Leadership
+  </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-    <div class="card p-4 text-center">
+    <div class="card p-5 text-center">
       <img src="MENTEE_PROJECT_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="font-bold burgundy">Mentored Research Project</h3>
-      <p class="text-sm mt-2">Short description.</p>
+      <h3 class="text-xl burgundy font-semibold">Mentored Research Project</h3>
+      <p class="text-sm mt-3">Short description of the work.</p>
     </div>
 
-    <div class="card p-4 text-center">
+    <div class="card p-5 text-center">
       <img src="MENTEE_PROJECT_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="font-bold burgundy">Mentored Research Project</h3>
-      <p class="text-sm mt-2">Short description.</p>
+      <h3 class="text-xl burgundy font-semibold">Mentored Research Project</h3>
+      <p class="text-sm mt-3">Short description of the work.</p>
     </div>
 
-    <div class="card p-4 text-center">
+    <div class="card p-5 text-center">
       <img src="LADY_TRAILBLAZERS_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="font-bold burgundy">Lady Trailblazers</h3>
-      <p class="text-sm mt-2">
-        Founder-led initiative supporting women in STEM through mentorship and visibility.
+      <h3 class="text-xl burgundy font-semibold">Lady Trailblazers</h3>
+      <p class="text-sm mt-3 leading-relaxed">
+        Founder-led initiative supporting young women in STEM through mentorship,
+        advocacy, and access.
       </p>
-      <div class="mt-4">
+      <div class="mt-5">
         <a href="LADY_TRAILBLAZERS_WEBSITE" class="btn">Visit Website</a>
       </div>
     </div>
@@ -181,15 +182,15 @@
 <div class="section-divider"></div>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-4xl mx-auto px-6 text-center py-16">
-  <h2 class="text-2xl burgundy font-bold mb-6">Get in Touch</h2>
-  <p>Email: yourname@email.com</p>
-  <div class="mt-4">
+<section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-3xl burgundy font-semibold mb-6">Correspondence</h2>
+  <p class="text-lg">yourname@email.com</p>
+  <div class="mt-6">
     <a href="LINKEDIN_URL" class="btn">LinkedIn</a>
   </div>
 </section>
 
-<footer class="text-center text-sm py-8 burgundy">
+<footer class="text-center text-sm py-10 burgundy opacity-80">
   © 2026 Mishika Bhatia
 </footer>
 
