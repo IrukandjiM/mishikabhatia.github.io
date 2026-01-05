@@ -12,19 +12,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    /* -------------------- BODY -------------------- */
     body {
       font-family: "Libre Baskerville", Georgia, serif;
-      background-color: #FAF8F3;
-      background-image: url("https://www.transparenttextures.com/patterns/linen.png");
       color: #2a2a2a;
       scroll-behavior: smooth;
+
+      /* Layered background: linen texture + subtle burgundy pattern overlay */
+      background-color: #FAF8F3;
+      background-image: 
+        url("https://www.transparenttextures.com/patterns/linen.png"), /* base linen */
+        linear-gradient(rgba(92,26,51,0.02), rgba(92,26,51,0.02)), /* faint burgundy overlay */
+        url("https://www.transparenttextures.com/patterns/damask.png"); /* subtle pattern */
+      background-repeat: repeat, repeat, repeat;
+      background-size: auto, auto, 400px 400px;
+      background-position: center, center, center;
     }
 
-    /* Colors */
+    /* -------------------- COLORS -------------------- */
     .deep-burgundy { color: #5C1A33; }
     .border-burgundy { border-color: #5C1A33; }
 
-    /* Buttons */
+    /* -------------------- BUTTONS -------------------- */
     .btn {
       padding: 0.55rem 1.5rem;
       font-size: 0.9rem;
@@ -44,7 +53,7 @@
       transform: translateY(-2px);
     }
 
-    /* Cards */
+    /* -------------------- CARDS -------------------- */
     .card {
       background: #fffefa;
       border: 1px solid #5C1A33;
@@ -81,14 +90,14 @@
       font-family: 'Playfair Display', serif;
     }
 
-    /* Hero Animations */
+    /* -------------------- HERO ANIMATIONS -------------------- */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px);}
       to { opacity: 1; transform: translateY(0);}
     }
     .animate-fadeIn { animation: fadeIn 1s forwards; }
 
-    /* Profile pic accent */
+    /* -------------------- PROFILE PIC -------------------- */
     .profile-pic {
       border: 4px solid #5C1A33;
       box-shadow: 0 4px 15px rgba(92,26,51,0.3);
@@ -97,14 +106,14 @@
     }
     .profile-pic:hover { transform: scale(1.05); }
 
-    /* Navbar sticky */
+    /* -------------------- NAVBAR -------------------- */
     nav.sticky {
       backdrop-filter: blur(8px);
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Section dividers */
+    /* -------------------- SECTION DIVIDERS -------------------- */
     .section-divider {
       width: 60px;
       height: 2px;
@@ -113,7 +122,7 @@
       border-radius: 1px;
     }
 
-    /* Headings */
+    /* -------------------- HEADINGS -------------------- */
     h2 {
       font-family: 'Playfair Display', serif;
       letter-spacing: 0.05em;
@@ -128,7 +137,7 @@
 <!-- NAVBAR -->
 <nav class="sticky top-0 bg-[#FAF8F3] border-b border-burgundy z-50">
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">mishika bhatia</a>
+    <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">Mishika Bhatia</a>
     <div class="space-x-6 text-sm">
       <a href="#about" class="hover:underline deep-burgundy">About</a>
       <a href="#projects" class="hover:underline deep-burgundy">Projects</a>
@@ -145,8 +154,8 @@
   </div>
   <h1 class="text-4xl font-bold mb-4 animate-fadeIn">Mishika Bhatia</h1>
   <p class="max-w-xl mx-auto text-lg mb-10 italic animate-fadeIn" style="animation-delay:0.3s;">
-    Biomedical researcher, translational scientist, and aspiring physician
-    focused on understudied diseases, edge science,
+    Biomedical researcher, founder, and aspiring physician
+    focused on understudied diseases, translational science,
     and STEM mentorship.
   </p>
   <div class="mt-10 animate-fadeIn" style="animation-delay:0.6s;">
@@ -296,7 +305,7 @@
 <section id="contact" class="py-24 border-t border-burgundy text-center">
   <h2 class="text-2xl deep-burgundy font-semibold mb-6">Get in Touch</h2>
   <p class="mb-8">For research, collaboration, or mentorship inquiries.</p>
-  <a href="mailto:" class="btn">Contact</a>
+  <a href="mailto:" class="btn">Email Me</a>
 </section>
 
 <footer class="py-8 text-center text-sm border-t border-burgundy deep-burgundy">
