@@ -8,11 +8,11 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://via.placeholder.com/32/5C1A33/ffffff?text=MB" type="image/png">
-
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon / Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' font-size='50' text-anchor='middle' fill='%235C1A33' font-family='Playfair Display'>MB</text></svg>">
 
   <style>
     body {
@@ -58,6 +58,8 @@
       overflow: hidden;
       opacity: 0;
       transform: translateY(20px);
+      border-left: 2px solid #5C1A33; /* vertical border for separation */
+      border-right: 2px solid #5C1A33;
     }
     .card.visible {
       opacity: 1;
@@ -107,27 +109,6 @@
       transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Navbar underline animation */
-    a.hover-underline {
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a.hover-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -2px;
-      background-color: #5C1A33;
-      transition: width 0.3s ease;
-    }
-    a.hover-underline:hover::after {
-      width: 100%;
-    }
-
     /* Section dividers */
     .section-divider {
       width: 60px;
@@ -143,17 +124,26 @@
       letter-spacing: 0.05em;
     }
 
-    section { scroll-margin-top: 100px; }
+    /* Navbar link underline animation */
+    a.hover-underline {
+      position: relative;
+      display: inline-block;
+    }
+    a.hover-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 2px;
+      width: 0%;
+      background: #5C1A33;
+      transition: width 0.3s ease;
+    }
+    a.hover-underline:hover::after {
+      width: 100%;
+    }
 
-    /* Footer social icons */
-    .footer-icons a {
-      color: #5C1A33;
-      margin: 0 0.5rem;
-      transition: color 0.3s;
-    }
-    .footer-icons a:hover {
-      color: #2a2a2a;
-    }
+    section { scroll-margin-top: 100px; }
   </style>
 </head>
 
@@ -162,7 +152,13 @@
 <!-- NAVBAR -->
 <nav class="sticky top-0 bg-[#FAF8F3] border-b border-burgundy z-50">
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">Mishika Bhatia</a>
+    <!-- Monogram + Name -->
+    <div class="flex items-center space-x-3">
+      <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-burgundy text-deep-burgundy font-bold text-lg">
+        MB
+      </div>
+      <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">Mishika Bhatia</a>
+    </div>
     <div class="space-x-6 text-sm">
       <a href="#about" class="hover-underline deep-burgundy">About</a>
       <a href="#projects" class="hover-underline deep-burgundy">Projects</a>
@@ -179,8 +175,8 @@
   </div>
   <h1 class="text-4xl font-bold mb-4 animate-fadeIn">Mishika Bhatia</h1>
   <p class="max-w-xl mx-auto text-lg mb-10 italic animate-fadeIn" style="animation-delay:0.3s;">
-    Biomedical researcher, translational scientist, and aspiring physician
-    focused on understudied diseases, edge science,
+    Biomedical researcher, founder, and aspiring physician
+    focused on understudied diseases, translational science,
     and STEM mentorship.
   </p>
   <div class="mt-10 animate-fadeIn" style="animation-delay:0.6s;">
@@ -220,7 +216,7 @@
         <h3 class="font-semibold mb-2">PCOS Translational Research</h3>
         <p class="text-sm mb-4">
           Investigated 5α-reductase inhibition as a potential therapeutic pathway
-          for PCOS; Grand Award winner at Regeneron ISEF.
+          for PCOS. Supported by CU Anschutz; presented at ISEF.
         </p>
         <a href="" class="btn">View Project</a>
         <a href="" class="btn">Media Article</a>
@@ -330,23 +326,11 @@
 <section id="contact" class="py-24 border-t border-burgundy text-center">
   <h2 class="text-2xl deep-burgundy font-semibold mb-6">Get in Touch</h2>
   <p class="mb-8">For research, collaboration, or mentorship inquiries.</p>
-  <a href="mailto:" class="btn">Contact/a>
+  <a href="mailto:" class="btn">Email Me</a>
 </section>
 
-<footer class="py-8 text-center text-sm border-t border-burgundy deep-burgundy">
-  © Mishika Bhatia
-  <div class="footer-icons mt-2">
-    <a href="#" target="_blank" title="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.354-.554 1.354-1.248-.015-.71-.517-1.248-1.34-1.248-.823 0-1.354.538-1.354 1.248 0 .694.517 1.248 1.32 1.248h.02zm4.908 8.212V9.359c0-.215.015-.429.079-.583.173-.429.567-.873 1.229-.873.867 0 1.214.657 1.214 1.62v3.717h2.401v-3.996c0-2.136-1.138-3.13-2.658-3.13-1.222 0-1.762.678-2.069 1.155h.03v-1H6.65c.03.663 0 7.225 0 7.225h2.401z"/>
-      </svg>
-    </a>
-    <a href="#" target="_blank" title="GitHub">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.075.547-.175.547-.388 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.056 1.225.825 1.225.825.715 1.223 1.873.87 2.33.666.072-.517.28-.87.508-1.07-1.777-.202-3.644-.888-3.644-3.955 0-.874.312-1.588.824-2.148-.083-.203-.357-1.016.078-2.117 0 0 .672-.215 2.2.82a7.7 7.7 0 012.002-.27 7.68 7.68 0 012.002.27c1.527-1.035 2.198-.82 2.198-.82.437 1.101.163 1.914.08 2.117.513.56.823 1.274.823 2.148 0 3.073-1.87 3.75-3.65 3.95.287.25.543.744.543 1.5 0 1.08-.01 1.95-.01 2.217 0 .215.144.466.55.387A8.001 8.001 0 008 0z"/>
-      </svg>
-    </a>
-  </div>
+<footer class="py-8 text-center text-sm border-t border-burgundy deep-burgundy opacity-80">
+  Designed &copy; Mishika Bhatia
 </footer>
 
 <script>
