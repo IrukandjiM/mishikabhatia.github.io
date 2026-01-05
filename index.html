@@ -17,14 +17,14 @@
       font-family: "Libre Baskerville", Georgia, serif;
       background-color: #FAF8F3;
 
-      /* Layered background: linen + faint floral pattern + subtle burgundy tint */
+      /* Layered background: linen + molecule pattern + faint burgundy tint */
       background-image: 
-        url("https://www.transparenttextures.com/patterns/linen.png"),
-        linear-gradient(rgba(92,26,51,0.03), rgba(92,26,51,0.03)),
-        url("https://www.transparenttextures.com/patterns/floral.png");
+        url("https://www.transparenttextures.com/patterns/linen.png"), /* base linen */
+        url("https://i.ibb.co/3mXwD4K/molecule-pattern.png"), /* subtle molecular overlay */
+        linear-gradient(rgba(92,26,51,0.02), rgba(92,26,51,0.02)); /* faint burgundy tint */
 
       background-repeat: repeat, repeat, repeat;
-      background-size: auto, cover, 400px 400px;
+      background-size: auto, 300px 300px, cover;
       background-position: center, center, center;
 
       color: #2a2a2a;
@@ -156,8 +156,8 @@
   </div>
   <h1 class="text-4xl font-bold mb-4 animate-fadeIn">Mishika Bhatia</h1>
   <p class="max-w-xl mx-auto text-lg mb-10 italic animate-fadeIn" style="animation-delay:0.3s;">
-    Biomedical researcher, founder, and aspiring physician
-    focused on understudied diseases, translational science,
+    Biomedical researcher, translational scientist, and aspiring physician
+    focused on understudied diseases, edge science,
     and STEM mentorship.
   </p>
   <div class="mt-10 animate-fadeIn" style="animation-delay:0.6s;">
@@ -266,7 +266,7 @@
 <!-- MENTORSHIP -->
 <section id="mentorship" class="py-24 border-t border-burgundy">
   <div class="max-w-screen-lg mx-auto px-6">
-    <h2 class="text-2xl deep-burgundy font-semibold mb-14 text-center">STEM Mentorship & Leadership</h2>
+    <h2 class="text-2xl deep-burgundy font-semibold mb-14 text-center">STEM Mentorship</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
