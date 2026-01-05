@@ -17,10 +17,10 @@
       font-family: "Libre Baskerville", Georgia, serif;
       background-color: #FAF8F3;
 
-      /* Layered background: linen + inline molecular SVG + faint burgundy overlay */
+      /* Layered background: linen + URL-encoded SVG + faint burgundy overlay */
       background-image: 
         url("https://www.transparenttextures.com/patterns/linen.png"),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="none" stroke="%235C1A33" stroke-opacity="0.03" stroke-width="2"/></svg>'),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpolygon points='50,0 100,25 100,75 50,100 0,75 0,25' fill='none' stroke='%235C1A33' stroke-opacity='0.03' stroke-width='2'/%3E%3C/svg%3E"),
         linear-gradient(rgba(92,26,51,0.02), rgba(92,26,51,0.02));
 
       background-repeat: repeat, repeat, repeat;
@@ -139,7 +139,7 @@
 <!-- NAVBAR -->
 <nav class="sticky top-0 bg-[#FAF8F3] border-b border-burgundy z-50">
   <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">mishika bhatia</a>
+    <a href="#home" class="deep-burgundy font-bold tracking-wide text-lg">mishika Bbatia</a>
     <div class="space-x-6 text-sm">
       <a href="#about" class="hover:underline deep-burgundy">About</a>
       <a href="#projects" class="hover:underline deep-burgundy">Projects</a>
@@ -156,7 +156,7 @@
   </div>
   <h1 class="text-4xl font-bold mb-4 animate-fadeIn">mishika bhatia</h1>
   <p class="max-w-xl mx-auto text-lg mb-10 italic animate-fadeIn" style="animation-delay:0.3s;">
-    Biomedical researcher, translational science, and aspiring physician
+    Biomedical researcher, translational scienctist, and aspiring physician
     focused on understudied diseases, edge science,
     and STEM mentorship.
   </p>
