@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mishika bhatia</title>
+  <title>Mishika Bhatia</title>
 
-  <!-- Serif font -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,38 +17,51 @@
       background-color: #fdfaf6;
       background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
       color: #2a2a2a;
+      scroll-behavior: smooth;
     }
 
     .burgundy { color: #7b1e3a; }
     .border-burgundy { border-color: #7b1e3a; }
 
+    /* Buttons */
     .btn {
-      border: 1px solid #7b1e3a;
-      color: #7b1e3a;
       padding: 0.55rem 1.5rem;
       font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
       transition: all 0.3s ease;
-      margin-right: 0.5rem;
       display: inline-block;
-    }
-
-    .btn:hover {
-      background-color: #7b1e3a;
+      background: linear-gradient(135deg, #7b1e3a, #b23a57);
       color: #fff;
+      border: none;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(123,30,58,0.4);
     }
 
+    /* Cards */
     .card {
       background: #ffffff;
       border: 1px solid #7b1e3a;
       border-radius: 14px;
       padding: 1.5rem;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
     }
-
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
     .card:hover {
       transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
-
     .card img {
       width: 100%;
       height: 220px;
@@ -56,6 +69,32 @@
       border-radius: 10px;
       background: #eee;
       margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Hero Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    /* Profile pic accent */
+    .profile-pic {
+      border: 4px solid #7b1e3a;
+      box-shadow: 0 4px 15px rgba(123,30,58,0.3);
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover { transform: scale(1.05); }
+
+    /* Navbar sticky */
+    nav.sticky {
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
     section { scroll-margin-top: 100px; }
@@ -81,16 +120,16 @@
 <section id="home" class="py-28 text-center">
   <!-- Profile Pic -->
   <div class="flex justify-center mb-6">
-    <img src="" alt="Profile Picture" class="rounded-full border-4 border-burgundy w-48 h-48 object-cover">
+    <img src="" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover profile-pic">
   </div>
 
-  <h1 class="text-4xl font-bold mb-6">Mishika Bhatia</h1>
-  <p class="max-w-xl mx-auto text-lg">
-    Biomedical researcher, translational scientist, and aspiring physician
-    focused on understudied diseases, clinical science,
+  <h1 class="text-4xl font-bold mb-6 animate-fadeIn">Mishika Bhatia</h1>
+  <p class="max-w-xl mx-auto text-lg mb-10 animate-fadeIn" style="animation-delay:0.3s;">
+    Biomedical researcher, founder, and aspiring physician
+    focused on understudied diseases, translational science,
     and STEM mentorship.
   </p>
-  <div class="mt-10">
+  <div class="mt-10 animate-fadeIn" style="animation-delay:0.6s;">
     <a href="" class="btn">Download CV</a>
   </div>
 </section>
@@ -199,7 +238,7 @@
 
       <div class="card">
         <img src="" alt="">
-        <h3 class="font-semibold mb-2">Research Mentorship</h3>
+        <h3 class="font-semibold mb-2">PCOS Research Mentorship</h3>
         <p class="text-sm">
           Mentoring students in experimental design,
           literature analysis, and scientific writing.
@@ -240,5 +279,21 @@
   © Mishika Bhatia
 </footer>
 
+<script>
+  // Smooth scroll already handled by CSS scroll-behavior
+  // Animate cards when they scroll into view
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
 </body>
 </html>
+
