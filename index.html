@@ -2,89 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mishika Bhatia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mishika Bhatia</title>
 
-  <!-- Old-money serif -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Serif font (old money vibes) -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/8022519056.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body {
-      font-family: 'EB Garamond', Georgia, serif;
-      color: #2a1b1d;
-      background-color: #f9f6f2;
-      background-image:
-        linear-gradient(0deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
-        repeating-linear-gradient(
-          45deg,
-          rgba(0,0,0,0.015) 0px,
-          rgba(0,0,0,0.015) 1px,
-          transparent 1px,
-          transparent 3px
-        );
+      font-family: "Libre Baskerville", Georgia, serif;
+      background-color: #fdfaf6;
+      background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+      color: #2b2b2b;
     }
 
-    :root {
-      --burgundy: #5b1f2a;
-      --cream: #f9f6f2;
+    .burgundy {
+      color: #7b1e3a;
     }
 
-    .burgundy { color: var(--burgundy); }
-    .bg-burgundy { background-color: var(--burgundy); }
-    .border-burgundy { border-color: var(--burgundy); }
+    .border-burgundy {
+      border-color: #7b1e3a;
+    }
 
-    .section-divider {
-      border-top: 1px solid var(--burgundy);
-      margin: 5rem auto;
-      width: 55%;
-      opacity: 0.5;
+    .btn {
+      border: 1px solid #7b1e3a;
+      color: #7b1e3a;
+      padding: 0.5rem 1.25rem;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .btn:hover {
+      background-color: #7b1e3a;
+      color: #fff;
     }
 
     .card {
       background: #ffffff;
-      border: 1px solid rgba(91,31,42,0.4);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      border: 1px solid #7b1e3a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
     }
 
-    .btn {
-      border: 1px solid var(--burgundy);
-      color: var(--burgundy);
-      padding: 0.45rem 1.2rem;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: var(--burgundy);
-      color: #ffffff;
-    }
-
-    nav a {
-      letter-spacing: 0.05em;
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background: #eee;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="sticky top-0 bg-white bg-opacity-80 backdrop-blur border-b border-burgundy z-50">
-  <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="text-xl burgundy font-semibold tracking-widest">&lt;/mishika&gt;</span>
-    <div class="space-x-8 text-sm uppercase">
+<!-- NAVBAR -->
+<nav class="sticky top-0 bg-[#fdfaf6] border-b border-burgundy z-50">
+  <div class="max-w-screen-lg mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#home" class="burgundy font-bold text-lg">&lt;/mishika&gt;</a>
+    <div class="space-x-6 text-sm">
+      <a href="#about" class="hover:underline">About</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#mentorship" class="hover:underline">Mentorship</a>
       <a href="#contact" class="hover:underline">Contact</a>
@@ -93,105 +79,148 @@
 </nav>
 
 <!-- HERO -->
-<section class="max-w-5xl mx-auto px-6 py-24 text-center">
-  <img src="YOUR_PROFILE_IMAGE.jpg"
-       class="mx-auto w-44 h-44 rounded-full object-cover mb-8 border border-burgundy" />
-
-  <h1 class="text-4xl burgundy font-semibold">Mishika Bhatia</h1>
-
-  <p class="mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-    Researcher and builder working across women’s health, biomedical engineering,
-    and equitable access to STEM education.
+<section id="home" class="py-24 text-center">
+  <h1 class="text-3xl font-bold mb-4">Mishika Bhatia</h1>
+  <p class="text-lg max-w-xl mx-auto">
+    Researcher, founder, and aspiring physician dedicated to
+    understudied diseases, translational science, and mentorship.
   </p>
-
-  <div class="mt-10">
-    <a href="YOUR_CV_LINK.pdf" class="btn">Download Curriculum Vitae</a>
+  <div class="mt-8">
+    <a href="" class="btn">Download CV</a>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ABOUT -->
+<section id="about" class="py-20 border-t border-burgundy">
+  <div class="max-w-screen-md mx-auto px-6">
+    <h2 class="text-2xl burgundy font-semibold mb-6">About</h2>
+    <p class="leading-relaxed">
+      I am a student researcher working at the intersection of biomedical science,
+      clinical translation, and equity in healthcare. My work focuses on diseases
+      that are common, stigmatized, or historically overlooked.
+    </p>
+  </div>
+</section>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl burgundy text-center font-semibold mb-14">
-    Selected Works
-  </h2>
+<section id="projects" class="py-24 border-t border-burgundy">
+  <div class="max-w-screen-lg mx-auto px-6">
+    <h2 class="text-2xl burgundy font-semibold mb-12 text-center">
+      Selected Works
+    </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-    <!-- PROJECT CARD -->
-    <div class="card p-5">
-      <img src="PROJECT_IMAGE.jpg" class="w-full h-60 object-cover mb-5" />
-      <h3 class="text-2xl burgundy font-semibold">PCOS Research</h3>
-      <p class="text-sm mt-3 leading-relaxed">
-        Brief description of the project’s scientific and social significance.
-      </p>
-      <div class="mt-5 flex space-x-4">
-        <a href="#" class="btn">Read</a>
-        <a href="#" class="btn">View Supplement</a>
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">PCOS Translational Research</h3>
+        <p class="text-sm mb-4">
+          Investigated 5α-reductase inhibition as a therapeutic pathway for PCOS,
+          supported by CU Anschutz and presented at ISEF.
+        </p>
+        <a href="" class="btn">View Project</a>
       </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">Pilonidal Disease Pediatric Research</h3>
+        <p class="text-sm mb-4">
+          Outcomes research in pediatric surgery at Children’s Hospital Colorado,
+          with publication anticipated.
+        </p>
+        <a href="" class="btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">Vivaly</h3>
+        <p class="text-sm mb-4">
+          Full-stack wellness platform featuring ML-based cyberbullying detection
+          and moderated social spaces.
+        </p>
+        <a href="" class="btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">3D-Printed Disaster-Resilient Housing</h3>
+        <p class="text-sm mb-4">
+          PETG curvilinear housing design capable of withstanding extreme loads
+          at low construction cost.
+        </p>
+        <a href="" class="btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">FemFairy</h3>
+        <p class="text-sm mb-4">
+          Women’s safety app integrating geospatial alerts, emergency routing,
+          and contact broadcasting.
+        </p>
+        <a href="" class="btn">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">OriFlair Solar Charger</h3>
+        <p class="text-sm mb-4">
+          Lightweight, modular solar charging system designed for everyday use.
+        </p>
+        <a href="" class="btn">View Project</a>
+      </div>
+
     </div>
-
-    <!-- Duplicate card structure for remaining projects -->
-    <!-- Pilonidal Disease -->
-    <!-- Vivaly -->
-    <!-- PETG Housing -->
-    <!-- FemFairy -->
-    <!-- Oriflair -->
-
   </div>
 </section>
-
-<div class="section-divider"></div>
 
 <!-- MENTORSHIP -->
-<section id="mentorship" class="max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl burgundy text-center font-semibold mb-14">
-    Mentorship & Leadership
-  </h2>
+<section id="mentorship" class="py-24 border-t border-burgundy">
+  <div class="max-w-screen-lg mx-auto px-6">
+    <h2 class="text-2xl burgundy font-semibold mb-12 text-center">
+      STEM Mentorship & Leadership
+    </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div class="card p-5 text-center">
-      <img src="MENTEE_PROJECT_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="text-xl burgundy font-semibold">Mentored Research Project</h3>
-      <p class="text-sm mt-3">Short description of the work.</p>
-    </div>
-
-    <div class="card p-5 text-center">
-      <img src="MENTEE_PROJECT_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="text-xl burgundy font-semibold">Mentored Research Project</h3>
-      <p class="text-sm mt-3">Short description of the work.</p>
-    </div>
-
-    <div class="card p-5 text-center">
-      <img src="LADY_TRAILBLAZERS_IMAGE.jpg" class="w-full h-48 object-cover mb-4" />
-      <h3 class="text-xl burgundy font-semibold">Lady Trailblazers</h3>
-      <p class="text-sm mt-3 leading-relaxed">
-        Founder-led initiative supporting young women in STEM through mentorship,
-        advocacy, and access.
-      </p>
-      <div class="mt-5">
-        <a href="LADY_TRAILBLAZERS_WEBSITE" class="btn">Visit Website</a>
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">PCOS Research Mentorship</h3>
+        <p class="text-sm">
+          Mentoring student researchers in experimental design and scientific writing.
+        </p>
       </div>
-    </div>
 
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">Surgical Outcomes Research</h3>
+        <p class="text-sm">
+          Guiding students in pediatric clinical research methodology.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="" alt="">
+        <h3 class="font-semibold mb-2">Lady Trailblazers</h3>
+        <p class="text-sm mb-4">
+          Statewide nonprofit empowering girls in STEM through curriculum and leadership.
+        </p>
+        <a href="" class="btn">Visit Organization</a>
+      </div>
+
+    </div>
   </div>
 </section>
-
-<div class="section-divider"></div>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
-  <h2 class="text-3xl burgundy font-semibold mb-6">Correspondence</h2>
-  <p class="text-lg">yourname@email.com</p>
-  <div class="mt-6">
-    <a href="LINKEDIN_URL" class="btn">LinkedIn</a>
-  </div>
+<section id="contact" class="py-24 border-t border-burgundy text-center">
+  <h2 class="text-2xl burgundy font-semibold mb-6">Get in Touch</h2>
+  <p class="mb-6">Email or connect with me professionally.</p>
+  <a href="mailto:" class="btn">Email Me</a>
 </section>
 
-<footer class="text-center text-sm py-10 burgundy opacity-80">
-  © 2026 Mishika Bhatia
+<footer class="py-8 text-center text-sm border-t border-burgundy">
+  © Mishika Bhatia
 </footer>
 
 </body>
